@@ -1,15 +1,11 @@
 pipeline {
-    agent {
-        docker {
-            image 'akamaiopen/cli'
-        }
-    }
+    agent any
 
     stages {
         stage('Deploy - Staging Environment (EPN)') {
             steps {
                 echo 'Deploying to Staging Environment'
-                sh 'pwd'
+                sh 'docker run -ti -v $HOME/.edgerc:/root/.edgerc akamaiopen/cli akamai'
             }
         }
     }
