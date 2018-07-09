@@ -7,7 +7,7 @@ pipeline {
                 echo 'Deploying to Staging Environment'
                 script {
 
-                    docker.image('akamaiopen/cli') {
+                    docker.image('akamaiopen/cli').inside {
                         sh 'akamai promotional-deployment'
                     }
                 }
