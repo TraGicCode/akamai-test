@@ -2,7 +2,8 @@ pipeline {
     agent {
         docker {
             image 'akamaiopen/cli'
-            args '--entrypoint=""'
+            // https://github.com/jenkinsci/docker-workflow-plugin/pull/116
+            // args '--entrypoint=""'
         }
     }
 
