@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker {
             image 'akamaiopen/cli'
-            args '-p 3000:3000'
+            args '-d -p 3000:3000'
         }
     }
 
