@@ -8,7 +8,7 @@ pipeline {
                 script {
 
                     docker.image('akamaiopen/cli').withRun('-e "MYSQL_ROOT_PASSWORD=my-secret-pw"') {
-                        sh 'akamai'
+                        sh 'ls -la'
                     }
                 }
             }
