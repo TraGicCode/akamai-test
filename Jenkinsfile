@@ -3,7 +3,8 @@ pipeline {
         docker {
             image 'akamaiopen/cli'
             // https://github.com/jenkinsci/docker-workflow-plugin/pull/116
-            // args '--entrypoint=""'
+            // below is required until the above gets figured out..
+            args '--entrypoint=""'
         }
     }
 
