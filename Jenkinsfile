@@ -9,10 +9,11 @@ pipeline {
     }
 
 
+
     stages {
         stage('Deploy - Staging Environment (EPN)') {
             steps {
-                sk 'akamai install promotional-deployment'
+                sh 'akamai install promotional-deployment'
                 // sh '/usr/local/bin/akamai install promotional-deployment'
                 // sh '/usr/local/bin/akamai promotional-deployment'
                 
