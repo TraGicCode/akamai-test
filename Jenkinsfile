@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker {
             image 'akamaiopen/cli'
-            args '--entrypoint="/usr/local/bin/akamai"'
+            args '--entrypoint="" -c "/usr/local/bin/akamai"'
         }
     }
 
