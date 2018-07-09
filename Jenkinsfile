@@ -1,12 +1,16 @@
 pipeline {
-    agent any
+    agent {
+        docker {
+            image 'akamaiopen/cli'
+        }
+    }
 
     stages {
         stage('Deploy - Staging Environment (EPN)') {
             steps {
-                echo 'Deploying to Staging Environment'
-                sh 'docker run -i -v $HOME/.edgerc:/root/.edgerc akamaiopen/cli install promotional-deployment'
-                sh 'docker run -i -v $HOME/.edgerc:/root/.edgerc akamaiopen/cli akamai'
+                sh 'install promotional-deployment'
+                //sh 'docker run -i -v $HOME/.edgerc:/root/.edgerc akamaiopen/cli install promotional-deployment'
+                //sh 'docker run -i -v $HOME/.edgerc:/root/.edgerc akamaiopen/cli promotional-deployment'
             }
         }
     }
