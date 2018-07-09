@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-            image 'docker pull akamaiopen/cli'
+            image 'akamaiopen/cli'
             args '-p 3000:3000'
         }
     }
