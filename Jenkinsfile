@@ -8,7 +8,7 @@ pipeline {
                 script {
 
                     docker.image('akamaiopen/cli').inside {
-                        sh 'akamai promotional-deployment'
+                        sh 'akamai'
                     }
                 }
             }
