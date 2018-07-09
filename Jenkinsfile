@@ -5,7 +5,7 @@ pipeline {
         stage('Deploy - Staging Environment (EPN)') {
             steps {
                 echo 'Deploying to Staging Environment'
-                sh 'docker run -ti -v $HOME/.edgerc:/root/.edgerc akamaiopen/cli akamai'
+                sh 'docker run -i -v $HOME/.edgerc:/root/.edgerc akamaiopen/cli akamai'
             }
         }
     }
